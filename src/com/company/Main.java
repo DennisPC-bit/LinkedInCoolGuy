@@ -1,13 +1,12 @@
 package com.company;
 
 public class Main {
-    private static final int SIZE = 10;
+    private static final int SIZE = 20;
     private static String[][] wow = new String[SIZE][SIZE];
-    private static final String s = "coolguy";
-    static Double newValue = 10.5123;
+    private static String s = ":)";
 
     public static void main(String[] args) {
-        makeSmiley();
+        makeSmiley(false, false, 1.75,1.5);
 
     }
 
@@ -26,10 +25,10 @@ public class Main {
         printBottom();
     }
 
-    private static void makeSmiley() {
-        makeTopPart(true, false);
+    private static void makeSmiley(boolean hair, boolean frame, double outerBound, double innerBound) {
+        makeTopPart(hair, frame);
         printTop();
-        makeCircularPart(1.75, 1.5, false);
+        makeCircularPart(outerBound, innerBound, frame);
         printBottom();
     }
 
